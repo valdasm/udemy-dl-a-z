@@ -45,8 +45,8 @@ X_test = sc.transform(X_test)
 
 # Importing the Keras libraries and packages
 import keras
-from keras.models import Sequential
-from keras.layers import Dense
+from keras.models import Sequential #initialize network
+from keras.layers import Dense #build layers
 
 # Initialising the ANN
 classifier = Sequential()
@@ -58,6 +58,7 @@ classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 're
 classifier.add(Dense(units = 6, kernel_initializer = 'uniform', activation = 'relu'))
 
 # Adding the output layer
+#softmax if you have more categories
 classifier.add(Dense(units = 1, kernel_initializer = 'uniform', activation = 'sigmoid'))
 
 # Compiling the ANN
